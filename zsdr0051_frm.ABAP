@@ -62,10 +62,10 @@ ENDFORM.
 *&---------------------------------------------------------------------*
 FORM f_outtab.
 
-  LOOP AT gt_knvv INTO gs_knvv.
+  LOOP AT gt_oiisocikn INTO gs_oiisocikn.
 
-    READ TABLE gt_oiisocikn INTO gs_oiisocikn
-                        WITH KEY kunnr = gs_knvv-kunnr BINARY SEARCH.
+    READ TABLE gt_knvv INTO gs_knvv
+                        WITH KEY kunnr = gs_oiisocikn-kunnr BINARY SEARCH.
     IF sy-subrc EQ 0.
 
       READ TABLE gt_/ico/mo_pr_cfth INTO gs_/ico/mo_pr_cfth
