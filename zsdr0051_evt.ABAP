@@ -13,5 +13,5 @@ END-OF-SELECTION.
   IF gt_outtab IS NOT INITIAL.
     PERFORM f_show_alv.
   ELSE.
-    MESSAGE text-002 TYPE 'S' DISPLAY LIKE 'E'.
+    MESSAGE 'Data not found!' TYPE 'S' DISPLAY LIKE 'E'.
   ENDIF.
